@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Bake&amp;Cake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="header">
+    <div class="contenedor">
+
+      <div class="logo">
+        <a href="../index.html">Bake&amp;Cake</a>
+      </div>
+
+      <div class="menu">
+        <ul id="menu">
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="activo" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div style="clear:both"></div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="seccion">
+    <div class="contenedor">
+
+      <div class="contact_box">
+
+        <h2>Craving more?</h2>
+        <p class="bajada">
+          Leave your details and I’ll get back to you.
+        </p>
+
+        <!-- FORM (html5 + validación básica) -->
+        <form id="contactForm" novalidate>
+  <p>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name" required minlength="2">
+  </p>
+
+  <p>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+  </p>
+
+  <p>
+    <input type="submit" value="Submit" class="boton">
+  </p>
+
+  <p id="formMsg" style="display:none; margin-top:14px;"></p>
+</form>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const msg  = document.getElementById("formMsg");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // validación html5
+    if (!form.checkValidity()){
+      msg.style.display = "block";
+      msg.innerText = "Please complete all fields correctly.";
+      return;
+    }
+
+    // “simulación” de envío
+    msg.style.display = "block";
+    msg.innerText = "Thanks! Your details were submitted correctly. I’ll get back to you soon.";
+    form.reset();
+  });
+</script>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="contenedor">
+
+      <div class="footer_logo">
+        <h2>Bake&amp;Cake</h2>
+        <p class="small">Recipe collection</p>
+      </div>
+
+      <div class="footer_cols">
+
+        <div class="footer_col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="../navegador/about.html">About</a></li>
+            <li><a href="../navegador/contact.html">Contact</a></li>
+            <li><a href="../navegador/recipes.html">Recipes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_col">
+          <h4>Recipes</h4>
+          <ul>
+            <li><a href="../categories/cookies.html">Cookies</a></li>
+            <li><a href="../categories/muffins.html">Muffins</a></li>
+            <li><a href="../categories/brownies.html">Brownies</a></li>
+            <li><a href="../categories/cakes.html">Cakes</a></li>
+            <li><a href="../categories/loafs.html">Loafs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/bymariafraga/">Instagram</a></li>
+            <li><a href="https://wa.me/34674209788">Whatsapp</a></li>
+          </ul>
+        </div>
+
+        <div style="clear:both"></div>
+      </div>
+
+      <div style="clear:both"></div>
+
+      <p class="copyright">© 2026 Bake&amp;Cake</p>
+    </div>
+  </div>
+
+</body>
+</html>
