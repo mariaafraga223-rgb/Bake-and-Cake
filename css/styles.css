@@ -617,3 +617,46 @@ a:hover{
     padding-bottom: 48px;
   }
 }
+/* new header mobile: logo centrado + menu en una sola fila */
+@media only screen and (max-width: 520px){
+
+  #header{
+    padding-top:16px;
+    padding-bottom:16px;
+  }
+
+  /* logo centrado */
+  .logo{
+    float:none;
+    text-align:center;
+    margin-bottom:14px;
+    font-size:20px;
+  }
+
+  /* menu en una fila */
+  .menu{
+    float:none;
+    width:100%;
+  }
+
+  #menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0;
+    margin:0;
+  }
+
+  #menu li{
+    float:none;
+    margin:0;
+    width:33.3333%;
+    text-align:center;
+  }
+
+  #menu li a{
+    font-size:12px;
+    font-weight:200;
+    display:block;
+  }
+}
